@@ -1,9 +1,16 @@
-<div class="span3 well">
-    <legend>Sign Up to Car Lot!</legend>
-  <form accept-charset="UTF-8" action="">
-  <input class="span3" name="name" placeholder="Full Name" type="text"> 
-      <input class="span3" name="username" placeholder="Username" type="text">
-      <input class="span3" name="password" placeholder="Password" type="password"> 
-      <button class="btn btn-warning" type="submit">Sign up to Car Lot</button>
-  </form>
+<div>
+  <div class="container">
+    <div class="col-md-6">
+      <div id="logbox">
+        <form id="signup" method="post" action="/signup">
+          <h1>Create an Account</h1>
+          <input name="user[email]" type="email" placeholder="Email address" class="input pass" />
+          <input name="user[password]" type="password" placeholder="Choose a password" required="required" class="input pass" />
+          <input name="user[password2]" type="password" placeholder="Confirm password" required="required" class="input pass" />
+          <input type="submit" value="Sign me up!" class="inputButton" />
+
+        </form>
+      </div>
+    </div>
+  </div>
 </div>
