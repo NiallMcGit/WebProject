@@ -10,7 +10,9 @@ import { Car } from './Car';
 })
 export class CarListComponent implements OnInit {
 
-  products: Car[] = [];
+  products: Car[] = [
+    
+  ];
   
   
   constructor() { }

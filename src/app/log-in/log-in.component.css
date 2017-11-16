@@ -42,7 +42,7 @@ h1 {
     display: block;
     margin: 30px auto 30px;
     color: white;
-    background-color: #3CC;
+    background-color: rgb(77, 77, 77);
     border: none;
     -webkit-box-shadow: 0 5px 0 #2CADAD;
     -moz-box-shadow: 0 5px 0 #2CADAD;

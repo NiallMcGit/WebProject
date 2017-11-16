@@ -2,12 +2,17 @@
     <div class="container">
       <div class="col-md-6">
         <div id="logbox">
-          <form id="signup" method="post" action="/signup">
-            <h1>Create Car Lot Account</h1>
+          <form id="signup">
+            <h1>Sign into Car Lot</h1>
             <input name="user[email]" type="email" placeholder="Email address" class="input pass" />
-            <input name="user[password]" type="password" placeholder="Choose a password" required="required" class="input pass" />
-            <input name="user[password2]" type="password" placeholder="Confirm password" required="required" class="input pass" />
-            <input type="submit" value="Sign me up!" class="inputButton" />
+            <input name="user[password]" type="password" placeholder="Enter password" required="required" class="input pass" />
+            <input type="submit" value="Log in!" class="inputButton" />
+            <div class="checkbox">
+                <label for="remember">
+                    <input type="checkbox" name="remember" id="remember"> Remember Me!
+                </label>
+            </div>
+            <a>Forgot Password</a>
           </form>
         </div>
       </div>
