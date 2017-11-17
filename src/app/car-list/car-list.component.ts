@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
-import { Car } from './Car';
+import { ICar } from './Car';
 
 
 @Component({
@@ -8,16 +8,38 @@ import { Car } from './Car';
   templateUrl: './car-list.component.html',
   styleUrls: ['./car-list.component.css']
 })
-export class CarListComponent implements OnInit {
+export class CarListComponent {
 
-  products: Car[] = [
-    
-  ];
+  showDescription: boolean = false;
+
+  cars: ICar[] =[
+    {
+        "carId": 1,
+        "carMake": "Opel",
+        "carModel": "Astra OPC",
+        "carYear": 2007,
+        "carColour": "Black",
+        "carMileage": 66000,
+        "carPrice": 7000,
+        "carDescription": "Great Car"
+    },
+    {
+      "carId": 1,
+      "carMake": "Opel",
+      "carModel": "Astra OPC",
+      "carYear": 2006,
+      "carColour": "Silver",
+      "carMileage": 78000,
+      "carPrice": 5000,
+      "carDescription": "Grand Car"
+  }
+];
   
   
   constructor() { }
 
-  ngOnInit() {
-  }
+toggleDescription():void{
+  this.showDescription = !this.showDescription;
+}
 
 }

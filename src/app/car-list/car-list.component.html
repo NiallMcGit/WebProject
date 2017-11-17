@@ -1,19 +1,9 @@
 <div class='panel panel-primary'>
   
   <div class='panel-body'>
-      <div class='row'>
-          <div class='col-md-2'>Filter by:</div>
-          <div class='col-md-4'>
-              <input type='text' />
-          </div>
-      </div>
-      <div class='row'>
-          <div class='col-md-6'>
-              <h3>Filtered by: </h3>
-          </div>
-      </div>
+
       <div class='table-responsive'>
-          <table class='table'>
+          <table id="details" class='table' *ngFor='let car of cars'>
               <thead>
                   <tr>
                       <th>Make</th>
@@ -21,16 +11,23 @@
                       <th>Year</th>
                       <th>Color</th>
                       <th>Mileage</th>
-                      <th>
-                          <button class='btn btn-primary'>
-                              Show Description
-                          </button>
-                      </th>
+                      <th>Image</th>
                   </tr>
               </thead>
-              <tbody>
-                 
-              </tbody>
+            <tbody>
+                <tr>
+                    <td>{{car.carMake}}</td>
+                    <td>{{car.carModel}}</td>
+                    <td>{{car.carYear}}</td>
+                    <td>{{car.carColour}}</td>
+                    <td>{{car.carMileage}}</td>
+                    <td>
+                        <button class="btn" (click) = 'toggleDescription()'>Show Description</button>
+                        <p *ngIf='showDescription'>{{car.carDescription}}</p>
+                    </td>
+                </tr>
+            
+            </tbody>
           </table>
       </div>
   </div>

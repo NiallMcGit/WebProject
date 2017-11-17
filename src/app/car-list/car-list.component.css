@@ -1,0 +1,10 @@
+td{
+    text-align: left;
+}
+
+#details{
+    border: solid black 1px;
+    height: 130px;
+    margin: 0 auto;
+    width: 500px;
+}
