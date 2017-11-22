@@ -22,6 +22,9 @@
                     <td>{{car.carColour}}</td>
                     <td>{{car.carMileage}}</td>
                     <td>
+                        <img height="60" src="{{car.imageURL}}">
+                    </td>
+                    <td>
                         <button class="btn" (click) = 'toggleDescription()'>Show Description</button>
                         <p *ngIf='showDescription'>{{car.carDescription}}</p>
                     </td>

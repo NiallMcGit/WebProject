@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { ICar } from '../car-list/Car';
 
 @Component({
@@ -11,6 +10,13 @@ import { ICar } from '../car-list/Car';
 export class PlaceAdComponent implements OnInit {
 
   constructor() { }
+
+  vehicleLookUp():void{
+
+    alert("What do i do here?");
+
+  }
+
 
   ngOnInit() {
   }

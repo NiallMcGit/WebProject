@@ -2,8 +2,10 @@
   <div class="vehicle-reg-holder">
     <div class="vehicle-reg-plate">Enter Reg   :
       <input type="text" id="registrationNumber" class="vehicle-reg-number"  placeholder="e.g. 09D1234">
-      <input type="button" id="get-details-btn" class="btn get-details-btn" value="Find">
+
+      <input type="button" id="get-details-btn" class="btn get-details-btn" value="Find" (click) = 'vehicleLookUp()'>
     </div>
+
     <div id="details-display">
     <p>Make</p><input type="text" value="{{carMake}}">
     <p>Model</p><input type="text" value="{{carModel}}">

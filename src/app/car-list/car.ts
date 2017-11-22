@@ -7,4 +7,5 @@ export interface ICar{
     carMileage: number;
     carPrice: number;
     carDescription: string;
+    imageURL: string;
 }

@@ -21,7 +21,8 @@ export class CarListComponent {
         "carColour": "Black",
         "carMileage": 66000,
         "carPrice": 7000,
-        "carDescription": "Great Car"
+        "carDescription": "Great Car",
+        "imageURL": "http://img11.hostingpics.net/pics/846696avantgaucheeglise3d6ec97.jpg"
     },
     {
       "carId": 2,
@@ -31,7 +32,9 @@ export class CarListComponent {
       "carColour": "Le Mans Blue",
       "carMileage": 78000,
       "carPrice": 7000,
-      "carDescription": "Grand Car"
+      "carDescription": "Grand Car",
+      "imageURL": "http://www.bmwsportscar.com/wp-content/uploads/2016/01/bmw-e46-m3-2006-IB-ZCP-01-1024x576.jpg"
+      
   }
 ];
   
