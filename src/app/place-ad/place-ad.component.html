@@ -1,0 +1,51 @@
+
+  <div class="vehicle-reg-holder">
+    <div class="vehicle-reg-plate">Enter Reg   :
+      <input type="text" id="registrationNumber" class="vehicle-reg-number"  placeholder="e.g. 09D1234">
+      <input type="button" id="get-details-btn" class="btn get-details-btn" value="Find">
+    </div>
+    <div id="details-display">
+    <p>Make</p><input type="text" value="{{carMake}}">
+    <p>Model</p><input type="text" value="{{carModel}}">
+    <p>Year</p><input type="text">{{carYear}}
+    <p>Engine</p><input type="text" value="{{carEngine}}">
+    <p>Color</p><input type="text" value="{{carColour}}">
+    </div>
+  </div>
+
+
+
+​ ​​https://www.regcheck.org.uk/api/reg.asmx
+
+
+
+<!-- displayVehicleDetails: function(lookUpValue, isUnEditableFilter) {
+  var thisClass = this;
+  var clickedEl = $(".get-details-btn");
+  var selectedSection = $("#subsection").val() || "";
+  var vehicleLookUpRequestUrl = '/adwrite/api/v3/vehicle/lookup/';
+  var postData = {
+    registrationNumber: lookUpValue,
+    sectionName: selectedSection
+  };
+
+  if (isUnEditableFilter) {
+    // New method for V3 POST will
+    // be used on all greenlightable sections
+    $.ajax({
+      url: vehicleLookUpRequestUrl,
+      type: 'POST',
+      contentType: "application/json; charset=utf-8",
+      data: JSON.stringify(postData),
+      dataType: 'json',
+      beforeSend: function(jqXHR, settings){
+        clickedEl.val("Loading...");
+        $("#vehicle-lookup-fail, #vehicle-lookup-success").fadeOut();
+        //clear filter values on new lookup
+        $('#filtersContainer .content-block:not(.vehicle-lookup-block) :input').val('');
+        $('#filtersContainer #mileageType').val('Kilometres');
+      },
+      success: function(data, textStatus, jqXHR) {
+        placeAdValidator.resetForm();
+        handleVehicleLookUpRequestResponse(data, lookUpValue);
+        $('#updateTracking').val("true").change(); -->

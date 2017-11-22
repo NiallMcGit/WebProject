@@ -24,13 +24,13 @@ export class CarListComponent {
         "carDescription": "Great Car"
     },
     {
-      "carId": 1,
-      "carMake": "Opel",
-      "carModel": "Astra OPC",
+      "carId": 2,
+      "carMake": "BMW",
+      "carModel": "320CD",
       "carYear": 2006,
-      "carColour": "Silver",
+      "carColour": "Le Mans Blue",
       "carMileage": 78000,
-      "carPrice": 5000,
+      "carPrice": 7000,
       "carDescription": "Grand Car"
   }
 ];
