@@ -3,6 +3,7 @@ td{
 }
 
 #details{
+    width: 70%;
     border: solid black 1px;
-    margin: 0 auto;
+    margin: 50px auto;
 }
