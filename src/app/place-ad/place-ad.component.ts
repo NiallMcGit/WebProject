@@ -13,7 +13,7 @@ import { CarsService } from '../shared/cars.service';
 })
 export class PlaceAdComponent implements OnInit {
   errorMessage: string;
-  REG: IREG[];
+  REGS: IREG[];
 
   regNumber: string;
 
@@ -21,14 +21,13 @@ export class PlaceAdComponent implements OnInit {
 
 
   vehicleLookUp(): void {
-
-
     this._carRegService.vehicleLookUp(this.regNumber).subscribe(REG => {
-      this.REG = REG;
+      this.REGS = REG;
+      console.log(this.REGS[0].CarMake)
+      
     },
       error => this.errorMessage = <any>error);
   }
 
   ngOnInit() {}
-
 }

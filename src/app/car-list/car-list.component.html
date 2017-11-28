@@ -25,11 +25,10 @@
                         <img height="60" src="{{car.imageURL}}">
                     </td>
                     <td>
-                        <button class="btn" (click) = 'toggleDescription()'>Show Description</button>
-                        <p *ngIf='showDescription'>{{car.carDescription}}</p>
+                        <button class="btn" (click) = 'toggleDescription()'>Show Description</button> 
+                        <p cols="40" rows="3" *ngIf='showDescription'>{{car.carDescription}}</p>                     
                     </td>
-                </tr>
-            
+                </tr>                       
             </tbody>
           </table>
       </div>

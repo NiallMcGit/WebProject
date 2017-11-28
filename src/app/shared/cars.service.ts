@@ -11,12 +11,12 @@ import "rxjs/add/operator/do";
 export class CarsService {
 
   private _username = "niallmcc";
+  private _RegLookUpURL = "https://www.regcheck.org.uk/api/reg.asmx​​/CheckIreland?RegistrationNumber="; // API Endpoint
+  private buildURL;
 
-  private _carUrl = "http://localhost:3000/cars";
+  private _carUrl = "http://localhost:3000/cars"; // Fake JSON server
 
-  private _RegLookUpURL = "https://www.regcheck.org.uk/api/reg.asmx​​";
-
-  // Dont use!
+  // Dont use! URL to check a reg.
   private exampleURL = "https://www.regcheck.org.uk/api/reg.asmx/CheckIreland?RegistrationNumber=08MO11758&username=niallmcc";
 
   constructor(private _http: HttpClient) { }
@@ -25,14 +25,18 @@ export class CarsService {
     return this._http.get<ICar[]>(this._carUrl)
     .do(data => console.log('All' + JSON.stringify(data)))
     .catch(this.handleError);
-
   }
 
-  // Send get request
+  // Send get request for car reg
   vehicleLookUp(reg:string): Observable<IREG[]> {
-    return this._http.get<IREG[]>(this._RegLookUpURL+"/CheckIreland?RegistrationNumber="+reg+"&username="+this._username)
+
+    this.buildURL = "https://www.regcheck.org.uk/api/reg.asmx​​/CheckIreland?RegistrationNumber="+reg+"&username=niallmcc";
+
+    console.log("Here is the reg you looked up:  " + reg);
+
+    return this._http.get<IREG[]>(this.buildURL)
     .do(data => console.log('All' + JSON.stringify(data)))
-    .catch(this.handleError);
+    .catch(this.handleError)
     }
 
   private handleError(err:HttpErrorResponse){

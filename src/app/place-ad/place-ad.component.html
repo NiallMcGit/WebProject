@@ -1,21 +1,31 @@
+<div class="vehicle-reg-holder">
+  <h1>Place Ad</h1>
+  <div id="searchDiv" class="input-group">
 
-  <div class="vehicle-reg-holder"> <h1>Place Ad</h1>
-    <div class="vehicle-reg-plate">Enter Reg   :
-      <input type='text' [(ngModel)]='regNumber' id="registrationNumber" class="vehicle-reg-number"  placeholder="e.g. 09D1234">
-      <input type="button" id="get-details-btn" class="btn btn-default" value="Find" (click) = 'vehicleLookUp()'>
+    <input id="registrationNumber" [(ngModel)]='regNumber' type="text" class="form-control" placeholder=" Enter Reg   e.g. 09D1234">
+    <div class="input-group-btn">
+        <button class="btn btn-default" (click)='vehicleLookUp()'>
+            <i class="glyphicon glyphicon-search"></i>
+        </button>
     </div>
-    {{regNumber}}
+</div>
+{{regNumber}}
 
-    <div id="details-display">
-    <p>Make</p><input type="text" value={{CarMake}}>
-    <p>Model</p><input type="text" value={{CarModel}}>
-    <p>Fuel Type</p><input type="text" value={{FuelType}}>
-    <p>Year</p><input type="text" value={{RegistrationYear}}>
-    <p>Description</p><input type="text" value={{Description}}>
-    </div>
+
+  <div id="details-display">
+    <p>Make</p>
+    <input type="text" value={{CarMake}}>
+    <p>Model</p>
+    <input type="text" value={{CarModel}}>
+    <p>Fuel Type</p>
+    <input type="text" value={{FuelType}}>
+    <p>Year</p>
+    <input type="text" value={{RegistrationYear}}>
+    <p>Description</p>
+    <input type="text" value={{Description}}>
   </div>
+</div>
 
 
 
 ​ ​​Api Endpoint : https://www.regcheck.org.uk/api/reg.asmx
-
