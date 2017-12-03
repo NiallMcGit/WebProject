@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarsService } from './shared/cars.service'
+import { CarsService } from './shared/cars.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',

@@ -1,6 +1,8 @@
 .col-md-6{
     border: 3px solid grey;
     width: 360px;
+    margin: 0 auto;
+    padding: 30px;
 }
 h1 {
     text-align: center;
@@ -21,7 +23,7 @@ h1 {
 
 .input:focus {
     outline: none;
-    border-bottom-color: #3CC !important;
+    border-bottom-color: rgb(63, 63, 63) !important;
 }
 
 .input:hover {
@@ -46,14 +48,14 @@ h1 {
     border: none;
     -webkit-box-shadow: 0 5px 0 #2CADAD;
     -moz-box-shadow: 0 5px 0 #2CADAD;
-    box-shadow: 0 5px 0 #2CADAD;
+    box-shadow: 0 5px 0 rgb(59, 59, 59);
 }
 
 .inputButton:hover {
     top: 2px;
     -webkit-box-shadow: 0 3px 0 #2CADAD;
     -moz-box-shadow: 0 3px 0 #2CADAD;
-    box-shadow: 0 3px 0 #2CADAD;
+    box-shadow: 0 3px 0 rgb(0, 202, 47);
 }
 
 .inputButton:active {

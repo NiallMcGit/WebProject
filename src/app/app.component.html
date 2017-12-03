@@ -1,62 +1,37 @@
 <div style="text-align:center">
-  <img width="100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-  <h1>Welcome to {{title}}</h1>
-  <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-          <div class="navbar-header">
-              <a class="navbar-brand" href="#">CarLot</a>
-          </div>
-          <ul class="nav navbar-nav">
-              <li class="active">
-                  <a href="#">Home</a>
-              </li>
-          </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li>
-                <a href="#">
-                    <span class="glyphicon glyphicon-user"></span> Sign Up</a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
-            </li>
-        </ul>
+    <img width="100" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+    <h1>Welcome to {{title}}</h1>
+
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand">CarLot</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active">>
+                    <a [routerLink]="['home']">Home</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li routerLinkActive="active">
+                    <a [routerLink]="['signup']">
+                        <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['login']">
+                        <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['placead']">
+                        <span class="glyphicon glyphicon-log-in"></span> Place an Ad</a>
+                </li>
+            </ul>
         </div>
-  </nav>
-   
-  <div id="welcome">
-      <h2>Find your Dream Car</h2>
+      </nav>
 
-      <div id="searchDiv" class="input-group">
-          <input id="search" type="text" class="form-control" placeholder="Search">
-          <div class="input-group-btn">
-              <button class="btn btn-default" type="submit">
-                  <i class="glyphicon glyphicon-search"></i>
-              </button>
-          </div>
-      </div>
-      <img class="img-responsive" src="http://www.pngmart.com/files/4/Car-Transparent-PNG.png" />
+    <router-outlet id="content"></router-outlet>
 
-  </div>
-  
 
-  <app-car-list></app-car-list>
+    <app-footer></app-footer>
 
-  <nav class="navbar navbar-inverse">
-      <ul id="footer" class="nav navbar-nav">
-          <li>
-              <a href="#">About Us</a>
-          </li>
-          <li>
-              <a href="#">Contact Us</a>
-          </li>
-          <li>
-              <a href="#">Terms & Conditions</a>
-          </li>
-      </ul>
-  </nav>
-  <app-place-ad></app-place-ad>
 </div>
-<app-sign-up></app-sign-up>
-<app-log-in></app-log-in>
-

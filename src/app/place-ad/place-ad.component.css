@@ -2,3 +2,9 @@
     margin: 0 auto;
     width: 35%;
 }
+#imageupload{
+    border: 3px solid grey;
+    width: 50%;
+    margin: 30px auto;
+    padding: 5%;
+}
