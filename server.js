@@ -21,7 +21,7 @@ app.use(cors());
 
 // // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/cars');
+mongoose.connect('mongodb://admin:Sonymac20%40@cluster0-shard-00-00-ax7dx.mongodb.net:27017,cluster0-shard-00-01-ax7dx.mongodb.net:27017,cluster0-shard-00-02-ax7dx.mongodb.net:27017/cars?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));

@@ -11,7 +11,7 @@
                             <br>Mileage: {{car.carMileage}}
                             <br> Price: €{{car.carPrice}}
                         </p>
-                        <img height="200" src="{{car.imageURL}}">
+                        <img class="img-responsive" height="200" src="{{car.imageURL}}">
                         <button class="btn" (click)='toggleDescription()'>{{showDescription ? 'Hide' : 'Show' }} Description</button>
                         <div id="discription" cols="20" rows="3" *ngIf='showDescription'>{{car.carDescription}}</div>
                         <br>
