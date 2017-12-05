@@ -1,10 +1,13 @@
-td{
-    text-align: left;
-}
-
 #details{
-    height: 200px;
+    height: auto;
     width: 70%;
     border: solid black 1px;
-    margin: 50px auto;
+    margin: 90px auto;
+
+}
+#discription{
+    text-align: left;
+}
+.list-group{
+    text-align: left;
 }

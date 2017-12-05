@@ -16,4 +16,14 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
+  register()
+{
+    if (this.email == null || this.password == null) {
+      alert("Please enter an email & password.");
+    }
+    else {
+      console.log("Email: " + this.email);
+      console.log("Password: " + this.password);
+    }
+  }
 }

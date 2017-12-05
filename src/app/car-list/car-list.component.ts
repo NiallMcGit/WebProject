@@ -29,6 +29,7 @@ export class CarListComponent implements OnInit {
   public ngOnInit(): void {
     this._carservice.getCars().subscribe(cars => {
       this.cars = cars;
+      console.log("Data: "+this.cars[0].carMake)
     },
       error => this.errorMessage = <any>error);
 
