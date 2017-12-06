@@ -29,6 +29,12 @@ export class CarsService {
     .catch(this.handleError);
   }
 
+  getUsers(): Observable<ICar[]> {
+    return this._http.get<ICar[]>(this._carUrl)
+    .do(data => console.log('All' + JSON.stringify(data)))
+    .catch(this.handleError);
+  }
+
   // Send get request for car reg
   vehicleLookUp(reg:string): Observable<IREG[]> {
 

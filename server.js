@@ -6,8 +6,9 @@ port = process.env.PORT || 3000;
 mongoose = require('mongoose'),
 
 // // Load the created model - product
-Car = require('./api/models/controllerListModel')
 
+Car = require('./api/models/controllerListModel');
+User = require('./api/models/controllerModelUser');
 /* Install bodyParser and use body Parser Parse incomming request bodies
 in a middleware before your handelers, available under the req.body property.
 It exposes various factories to create middlewares.

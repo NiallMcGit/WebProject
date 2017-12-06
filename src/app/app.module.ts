@@ -1,3 +1,4 @@
+import { AuthguardGuard } from './authguard.guard';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
@@ -14,6 +15,8 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserService } from './shared/user.service';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -22,7 +25,12 @@ const routes: Routes = [
   { path: 'signup', component: SignUpComponent },
   { path: 'placead', component: PlaceAdComponent },
   { path: 'contactus', component: ContactusComponent },
-  { path: 'displaycars', component: CarListComponent }
+  { path: 'displaycars', component: CarListComponent },
+
+  { path: 'dashboard', 
+  canActivate: [AuthguardGuard], 
+  component: DashboardComponent }
+ // { path : 'users/:name'}
   
 ];
 
@@ -36,7 +44,8 @@ const routes: Routes = [
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    ContactusComponent
+    ContactusComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +53,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [UserService, AuthguardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -2,11 +2,11 @@
   <div class="container">
     <div class="col-md-6">
       <div id="logbox">
-        <form id="signup">
+        <form id="signup" method="post">
           <h1>Create Car Lot Account</h1>
           <input [(ngModel)]='email' name="email" type="email" placeholder="Email address" class="input pass" />
           <input [(ngModel)]='password' name="password" type="password" placeholder="Choose a password" required="required" class="input pass" />
-          <input name="password2" type="password" placeholder="Confirm password" required="required" class="input pass" />
+          <input [(ngModel)]='password2' name="password2" type="password" placeholder="Confirm password" required="required" class="input pass" />
           <input (click)="register()" type="submit" value="Sign me up!" class="inputButton" />
 
         </form>

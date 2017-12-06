@@ -3,7 +3,6 @@
 var mongoose = require('mongoose'),
     Car = mongoose.model('Cars');
 
-
     // Working
     exports.list_all_cars = function (req, res) {
         Car.find({}, function (err, car) {
