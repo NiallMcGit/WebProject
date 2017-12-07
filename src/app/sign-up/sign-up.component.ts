@@ -22,24 +22,43 @@ export class SignUpComponent implements OnInit {
 
     if(this.email == 'niall' && this.password == 'pass1')
     {
-      if(this.password == this.password2){
+      if(this.password == this.password2)
+      {
         this.user.setUserLoggedIn();
         this.router.navigate(['dashboard']);
       }
-
+      else
+      {
+        console.log("Incorrect Username or Password");
+        alert("Incorrect Username or Password");
+      }
+      
     }
     else if(this.email == 'connor' && this.password == 'pass2')
     {
-      this.user.setUserLoggedIn();
-      
-      this.router.navigate(['dashboard']);
+      if(this.password == this.password2)
+      {
+        this.user.setUserLoggedIn();
+        this.router.navigate(['dashboard']);
+      }
+      else
+      {
+        console.log("Incorrect Username or Password");
+        alert("Incorrect Username or Password");
+      }
     }
     else if(this.email == 'frankie' && this.password == 'pass3')
     {
-      this.user.setUserLoggedIn();
-      
-      this.router.navigate(['dashboard']);
+      if(this.password == this.password2)
+      {
+        this.user.setUserLoggedIn();
+        this.router.navigate(['dashboard']);
+      }
+      else
+      {
+        console.log("Incorrect Username or Password");
+        alert("Incorrect username or password" );
+      }
     }
-
   }
 }
