@@ -5,6 +5,8 @@
         <form id="signup" method="post">
           <h1>Create Car Lot Account</h1>
           <input [(ngModel)]='email' name="email" type="email" placeholder="Email address" class="input pass" />
+          <input [(ngModel)]='fname' name="fname" type="text" placeholder="First Name" class="input pass" />
+          <input [(ngModel)]='lname' name="lname" type="text" placeholder="Last Name" class="input pass" />
           <input [(ngModel)]='password' name="password" type="password" placeholder="Choose a password" required="required" class="input pass" />
           <input [(ngModel)]='password2' name="password2" type="password" placeholder="Confirm password" required="required" class="input pass" />
           <input (click)="register()" type="submit" value="Sign me up!" class="inputButton" />

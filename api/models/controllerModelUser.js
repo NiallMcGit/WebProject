@@ -13,19 +13,19 @@ var UserSchema = new Schema({
     },
     userFirstName:{
         type: String,
-        default: 'Make not entered'
+        default: 'First name not entered'
     },
     userLastName:{
         type: String,
-        default: 'Model not entered'
+        default: 'Last name not entered'
     },
     userEmail:{
         type: String,
-        default: 'Year not entered'
+        default: 'Email not entered'
     },
     userPassword:{
         type: String,
-        default: 'Colour not entered'
+        default: 'Password not entered'
     }
 });
 module.exports = mongoose.model('Users', UserSchema);

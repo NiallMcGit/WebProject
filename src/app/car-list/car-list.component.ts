@@ -1,8 +1,8 @@
 import { CarsService } from '../shared/cars.service';
 import { Component, OnInit } from '@angular/core';
 
-import { ICar } from './Car';
-import { IREG } from './Car';
+import { ICar } from '../shared/car';
+import { IREG } from '../shared/car';
 
 
 

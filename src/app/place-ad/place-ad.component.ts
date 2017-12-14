@@ -1,7 +1,7 @@
 import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
-import { ICar } from '../car-list/Car';
-import { IREG } from '../car-list/Car';
+import { ICar } from '../shared/Car';
+import { IREG } from '../shared/Car';
 
 import { CarsService } from '../shared/cars.service';
 

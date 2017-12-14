@@ -1,5 +1,5 @@
-import { ICar } from '../car-list/car';
-import { IREG } from '../car-list/car';
+import { ICar } from './car';
+import { IREG } from './car';
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
@@ -24,12 +24,6 @@ export class CarsService {
   constructor(private _http: HttpClient) { }
 
   getCars(): Observable<ICar[]> {
-    return this._http.get<ICar[]>(this._carUrl)
-    .do(data => console.log('All' + JSON.stringify(data)))
-    .catch(this.handleError);
-  }
-
-  getUsers(): Observable<ICar[]> {
     return this._http.get<ICar[]>(this._carUrl)
     .do(data => console.log('All' + JSON.stringify(data)))
     .catch(this.handleError);

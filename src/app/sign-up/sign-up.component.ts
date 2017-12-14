@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../shared/user.service';
+import { create_a_user } from '../../../api/controllers/controllerUserController'
+
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
@@ -9,6 +11,8 @@ import { UserService } from '../shared/user.service';
 export class SignUpComponent implements OnInit {
 
   email: string;
+  fname: string;
+  lname: string;
   password: string;
   password2: string;
 
@@ -17,48 +21,20 @@ export class SignUpComponent implements OnInit {
   ngOnInit() {
   }
 
-  register()
-{
+  register() {
 
-    if(this.email == 'niall' && this.password == 'pass1')
-    {
-      if(this.password == this.password2)
-      {
-        this.user.setUserLoggedIn();
-        this.router.navigate(['dashboard']);
-      }
-      else
-      {
-        console.log("Incorrect Username or Password");
-        alert("Incorrect Username or Password");
-      }
-      
+    const newUser = {
+      email: this.email,
+      fname: this.fname,
+      lname: this.lname,
+      password: this.password
     }
-    else if(this.email == 'connor' && this.password == 'pass2')
+
+    if(this.password == this.password2)
     {
-      if(this.password == this.password2)
-      {
-        this.user.setUserLoggedIn();
-        this.router.navigate(['dashboard']);
-      }
-      else
-      {
-        console.log("Incorrect Username or Password");
-        alert("Incorrect Username or Password");
-      }
+      this.user.RegisterUser(newUser);
     }
-    else if(this.email == 'frankie' && this.password == 'pass3')
-    {
-      if(this.password == this.password2)
-      {
-        this.user.setUserLoggedIn();
-        this.router.navigate(['dashboard']);
-      }
-      else
-      {
-        console.log("Incorrect Username or Password");
-        alert("Incorrect username or password" );
-      }
-    }
+
+
   }
 }
