@@ -6,6 +6,10 @@ import { NgModule } from '@angular/core';
 
 import { Routes, RouterModule } from '@angular/router';
 
+import { CarsService } from './shared/cars.service';
+import { UserService } from './shared/user.service';
+
+
 import { AppComponent } from './app.component';
 import { CarListComponent } from './car-list/car-list.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -16,7 +20,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { UserService } from './shared/user.service';
+import { DashboardFooterComponent } from './dashboard-footer/dashboard-footer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -27,9 +31,16 @@ const routes: Routes = [
   { path: 'contactus', component: ContactusComponent },
   { path: 'displaycars', component: CarListComponent },
 
-  { path: 'dashboard', 
-  canActivate: [AuthguardGuard], 
-  component: DashboardComponent }
+  {
+    path: 'dashboard',
+    canActivate: [AuthguardGuard],
+    component: DashboardComponent
+  },
+  {
+    path: 'dashboard',
+    canActivate: [AuthguardGuard],
+    component: DashboardFooterComponent
+  }
  // { path : 'users/:name'}
   
 ];
@@ -45,7 +56,8 @@ const routes: Routes = [
     NavbarComponent,
     FooterComponent,
     ContactusComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardFooterComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +65,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [UserService, AuthguardGuard],
+  providers: [CarsService, UserService, AuthguardGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

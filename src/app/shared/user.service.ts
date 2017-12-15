@@ -29,8 +29,7 @@ export class UserService {
     console.log(err.message);
     return Observable.throw(err.message);
   }
-
-
+  
    setUserLoggedIn(){
      this.isUserLogginIn = true;
    }
@@ -40,8 +39,8 @@ export class UserService {
    }
 
    RegisterUser(newUser){
-    // return this._http.post<IUser[]>(newUser)
-    
+     
+     this._http.post(this._userURL, newUser);
    }
 
 }

@@ -23,10 +23,10 @@ export class LogInComponent implements OnInit {
       if(this.email == 'niall' && this.password == 'pass1')
       {
           this.user.setUserLoggedIn();
-          this.router.navigate(['dashboard']); 
+          this.router.navigate(['dashboard']);
           alert("Hello "+ this.email +", Welcome to Car Lot")            
       }
-      else if(this.email == 'connor' && this.password == 'pass2')
+      else if(this.email == 'conor' && this.password == 'pass2')
       {
           this.user.setUserLoggedIn();
           this.router.navigate(['dashboard']);

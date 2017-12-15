@@ -3,3 +3,51 @@
   <a routerLink="/">Go back</a>
 </p>
 
+<div class="container">
+    <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+ 
+				<div class="profile-userpic">
+					<img src="http://www.freeiconspng.com/uploads/profile-icon-9.png" class="img-responsive" alt="">
+				</div>
+ 
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						User Name Here
+					</div>
+					<div class="profile-usertitle-job">
+						Car Sales
+					</div>
+				</div>
+ 
+				<div class="profile-userbuttons">
+					<button type="button" class="btn btn-success btn-sm">Edit Account</button>
+					<button [routerLink]="['placead']" type="button" class="btn btn-danger btn-sm">Place an Ad</button>
+				</div>
+ 
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a>
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+						<li>
+							<a>
+							<i class="glyphicon glyphicon-ok"></i>
+							Tasks </a>
+						</li>
+						<li>
+							<a>
+							<i class="glyphicon glyphicon-flag"></i>
+							Help </a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<app-dashboard-footer></app-dashboard-footer>

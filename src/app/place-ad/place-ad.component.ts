@@ -4,6 +4,7 @@ import { ICar } from '../shared/Car';
 import { IREG } from '../shared/Car';
 
 import { CarsService } from '../shared/cars.service';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 
 @Component({
@@ -15,10 +16,27 @@ export class PlaceAdComponent implements OnInit {
   errorMessage: string;
   REGS: IREG[];
 
+  make:string;
+  model:string;
+  fueltype:string;
+  year:number;
+  description;
+private exampleXMLFile = "http://ie.carregistrationapi.com/sample.xml"
+
+
   regNumber: string;
+  builtUrl:string;
+  private exampleURL = "https://www.regcheck.org.uk/api/reg.asmx/CheckIreland?RegistrationNumber=08MO11758&username=niallmcc";
 
-  constructor(private _carRegService: CarsService) {}
+  constructor( private _http: HttpClient ,private _carRegService: CarsService) {}
 
+  reglookup(){
+    this.builtUrl = "https://www.regcheck.org.uk/api/reg.asmx​​/CheckIreland?RegistrationNumber="+this.regNumber+"&username=niallmcc";
+    console.log("Here is the reg you looked up:  " + this.regNumber);
+    
+        return this._http.get(this.builtUrl)
+        .do(data => console.log('All' + JSON.stringify(data)))      
+  }
 
   vehicleLookUp(): void {
     this._carRegService.vehicleLookUp(this.regNumber).subscribe(REG => {
@@ -27,6 +45,10 @@ export class PlaceAdComponent implements OnInit {
       
     },
       error => this.errorMessage = <any>error);
+
+      this._http.get(this.exampleXMLFile, { responseType: 'text' }).subscribe(response => {
+        console.log(response);
+      });
   }
 
   ngOnInit() {}

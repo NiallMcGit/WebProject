@@ -20,6 +20,7 @@ module.exports = function(app){
     .get(users.list_all_users)
     .post(users.create_a_user)
 
-    app.route('/users/:userId')
+    app.route('/users/:userID')
     .get(users.read_a_userId)
+    .delete(users.delete_a_user)
 };

@@ -1,36 +1,36 @@
 <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
+    <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">              
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">              
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
             <a [routerLink]="['home']" class="navbar-brand">CarLot</a>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav navbar-right">
+        </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
                     <li routerLinkActive="active">
-                        <a [routerLink]="['home']">Home</a>
+                        <a [routerLink]="['home']">
+                            <span class="glyphicon glyphicon-home"></span><br>Home</a>
                     </li>
                     <li routerLinkActive="active">
                         <a [routerLink]="['signup']">
-                            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                            <span class="glyphicon glyphicon-user"></span><br>Sign Up</a>
                     </li>
                     <li routerLinkActive="active">
                         <a [routerLink]="['login']">
-                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                            <span class="glyphicon glyphicon-log-in"></span><br>Login</a>
                     </li>
                     <li routerLinkActive="active">
                         <a [routerLink]="['placead']">
-                            <span class="glyphicon glyphicon-log-in"></span> Place an Ad</a>
+                            <span class="glyphicon glyphicon-log-in"></span><br>Place an Ad</a>
                     </li>
                     <li routerLinkActive="active">
                         <a [routerLink]="['displaycars']">
-                            Show Cars <span class="glyphicon glyphicon-search"></span></a>
+                            <span class="glyphicon glyphicon-search"></span><br>Show All Cars</a>
                     </li>
                 </ul>
             </div>
-            
-        </div>
     </div>
 </div>

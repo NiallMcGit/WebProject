@@ -24,17 +24,11 @@ export class SignUpComponent implements OnInit {
   register() {
 
     const newUser = {
-      email: this.email,
-      fname: this.fname,
-      lname: this.lname,
-      password: this.password
+      userEmail: this.email,
+      userFirstName: this.fname,
+      userLastName: this.lname,
+      userPassword: this.password
     }
-
-    if(this.password == this.password2)
-    {
       this.user.RegisterUser(newUser);
-    }
-
-
   }
 }

@@ -13,11 +13,13 @@ var mongoose = require('mongoose'),
     
     },
     exports.create_a_user = function (req, res) {
-        var new_user = new Car(req.body);
+        var new_user = new User(req.body);
         new_user.save({},function (err, user) {
             if (err)
             res.send(err);
         res.json(user); 
+        console.log('user created');
+    
         })
     },
     exports.read_a_userId = function (req, res) {
@@ -26,4 +28,12 @@ var mongoose = require('mongoose'),
                 res.send(err);
             res.json(user);
         });
+    },
+    exports.delete_a_user = function (req, res) {
+        User.findOneAndRemove({ userID: req.params.userID }, function (err, user) {
+                if (err)
+                    res.send(err);
+                res.json(user);
+                console.log('user deleted');
+            });
     }

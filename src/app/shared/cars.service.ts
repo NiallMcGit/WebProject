@@ -12,13 +12,11 @@ export class CarsService {
 
   private _username = "niallmcc";
 
-  private _RegLookUpURL = "https://www.regcheck.org.uk/api/reg.asmx​​/CheckIreland?RegistrationNumber="; // API Endpoint
+  private exampleXMLFile = "http://ie.carregistrationapi.com/sample.xml"
+
   private buildURL;
 
   private _carUrl = "http://localhost:3000/cars"; // Fake JSON server, start server :   json-server --watch db.json
-
-  // Dont use! URL to check a reg. https://www.regcheck.org.uk/api/reg.asmx?op=CheckIreland
-  private exampleURL = "https://www.regcheck.org.uk/api/reg.asmx/CheckIreland?RegistrationNumber=08MO11758&username=niallmcc";
 
 
   constructor(private _http: HttpClient) { }
@@ -36,10 +34,17 @@ export class CarsService {
 
     console.log("Here is the reg you looked up:  " + reg);
 
-    return this._http.get(this.buildURL)
+    // this._http.get(this.exampleXMLFile, { responseType: 'text' }).subscribe(response => {
+    //   console.log(response);
+    // });
+
+    return this._http.get(this.exampleXMLFile)
     .do(data => console.log('All' + JSON.stringify(data)))
     .catch(this.handleError)
     
+    // return this._http.get(this.buildURL).parseString(data, function(err, result){
+      
+    //       })
     }
 
   private handleError(err:HttpErrorResponse){
