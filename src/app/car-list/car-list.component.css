@@ -11,3 +11,8 @@
 .list-group{
     text-align: left;
 }
+
+.col-md-4 {
+    padding: 10px;
+    margin: 10px;
+}

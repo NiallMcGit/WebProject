@@ -1,9 +1,12 @@
+<div class='col-md-2'>Search:</div>
+<div class='col-md-4'>
+    <input type='text'
+    [(ngModel)]='listFilter' />
+</div>
 <div class='panel panel-primary'>
-
     <div class='panel-body'>
-
         <div class="cad-content divider">
-            <ul class="list-group" *ngFor='let car of cars'>
+            <ul class="list-group" *ngFor='let car of filteredCars'>
                 <div class="list-group">
                     <a class="list-group-item active">
                         <h4 class="list-group-item-heading">{{car.carMake}} {{car.carModel}}</h4>
