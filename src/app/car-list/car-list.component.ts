@@ -21,9 +21,10 @@ export class CarListComponent implements OnInit {
 
   constructor(private _carservice: CarsService) {}
 
-  _listFilter: string = '';
+  _listFilter: string = ''; 
+  
   get listFilter():string{
-    return this._listFilter;
+    return this._listFilter; 
   }
 
   set listFilter(value: string) {
